@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+
+textarea {
+  all: unset;
+  font-size: 1.25rem;
+  padding-block: 2em;
+  padding-inline: 1em;
+  resize: none;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.one {
+  background-color: purple;
+}
+.one h2 {
+  color: white;
+  padding: 2rem 2em;
+  font-size: 2.5rem;
+}
+.two {
+  display: grid;
+  /* min-height: calc(100vh - 2rem); */
+  grid-template-columns: 1fr 1fr;
+  background-color: darkblue;
+  padding: 0 0 0 5em;
+}
+
+button {
+  cursor: pointer;
+  position: relative;
+  padding: 0px 2px;
+  font-size: 20px;
+  line-height: 1;
+  border-radius: 3px;
+  background-color: darkblue;
+  border: 0;
+  overflow: hidden;
+}
+button input[type="file"] {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(3);
+  opacity: 0;
+  border: 0;
+}
+.icon3 {
+  grid-column: 1 / span 2;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+.icon2 {
+  display: flex;
+  gap: 20px;
+}
+
+.five {
+  min-height: calc(100vh - 17rem);
+  align-items: stretch;
+  background-color: #322424;
+  color: whitesmoke;
+}
+.six {
+  background-color: rgb(189, 189, 189);
+  color: rgb(7, 7, 170);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* width and height */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: purple;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkblue;
+  border-radius: 15px;
+}
+
+@media (max-width: 900px) {
+  .two {
+    padding-left: 0;
+    flex-direction: column;
+  }
+  .five {
+    width: 100%;
+  }
+  .six {
+    width: 100%;
+  }
+}

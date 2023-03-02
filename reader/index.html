@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler</title>
+    <script src="./compiler.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin = "anonymous" referrerpolicy = "no-referrer"> </script>
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+</head>
+<body>
+    <div >
+        <div class="one">
+            <h2>Compiler</h2>
+            <div class="two">
+                <!-- <input type="file" onchange="uploadAndReadFile(this.files)"> -->
+                <div class="icon3">
+                    <div class="icon2">
+                        <button class="save" title="download">
+                            <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 2.5C4.33696 2.5 3.70107 2.76339 3.23223 3.23223C2.76339 3.70107 2.5 4.33696 2.5 5V35C2.5 35.663 2.76339 36.2989 3.23223 36.7678C3.70107 37.2366 4.33696 37.5 5 37.5H35C35.663 37.5 36.2989 37.2366 36.7678 36.7678C37.2366 36.2989 37.5 35.663 37.5 35V5C37.5 4.33696 37.2366 3.70107 36.7678 3.23223C36.2989 2.76339 35.663 2.5 35 2.5H23.75C23.087 2.5 22.4511 2.76339 21.9822 3.23223C21.5134 3.70107 21.25 4.33696 21.25 5V23.2325L27.865 16.615C28.0997 16.3803 28.4181 16.2484 28.75 16.2484C29.0819 16.2484 29.4003 16.3803 29.635 16.615C29.8697 16.8497 30.0016 17.1681 30.0016 17.5C30.0016 17.8319 29.8697 18.1503 29.635 18.385L20.885 27.135C20.7689 27.2514 20.6309 27.3438 20.4791 27.4068C20.3272 27.4698 20.1644 27.5022 20 27.5022C19.8356 27.5022 19.6728 27.4698 19.5209 27.4068C19.3691 27.3438 19.2311 27.2514 19.115 27.135L10.365 18.385C10.2488 18.2688 10.1566 18.1308 10.0937 17.979C10.0308 17.8271 9.99842 17.6644 9.99842 17.5C9.99842 17.3356 10.0308 17.1729 10.0937 17.021C10.1566 16.8692 10.2488 16.7312 10.365 16.615C10.4812 16.4988 10.6192 16.4066 10.771 16.3437C10.9229 16.2808 11.0856 16.2484 11.25 16.2484C11.4144 16.2484 11.5771 16.2808 11.729 16.3437C11.8808 16.4066 12.0188 16.4988 12.135 16.615L18.75 23.2325V5C18.75 3.67392 19.2768 2.40215 20.2145 1.46447C21.1521 0.526784 22.4239 0 23.75 0L35 0C36.3261 0 37.5979 0.526784 38.5355 1.46447C39.4732 2.40215 40 3.67392 40 5V35C40 36.3261 39.4732 37.5979 38.5355 38.5355C37.5979 39.4732 36.3261 40 35 40H5C3.67392 40 2.40215 39.4732 1.46447 38.5355C0.526784 37.5979 0 36.3261 0 35V5C0 3.67392 0.526784 2.40215 1.46447 1.46447C2.40215 0.526784 3.67392 0 5 0L11.25 0C11.5815 0 11.8995 0.131696 12.1339 0.366117C12.3683 0.600537 12.5 0.918479 12.5 1.25C12.5 1.58152 12.3683 1.89946 12.1339 2.13388C11.8995 2.3683 11.5815 2.5 11.25 2.5H5Z" fill="white"/>
+                            </svg>
+                        </button>
+                         
+                        <button type="button"  class="file" title="choose file">
+                            <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg" type="file" onchange="uploadAndReadFile(this.files)" >
+                                <g clip-path="url(#clip0_3_2)">
+                                <path d="M0 5C0 2.24219 2.61589 0 5.83333 0H20.4167V10C20.4167 11.3828 21.7201 12.5 23.3333 12.5H35V35C35 37.7578 32.3841 40 29.1667 40H5.83333C2.61589 40 0 37.7578 0 35V5ZM35 10H23.3333V0L35 10Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_3_2">
+                                <rect width="35" height="40" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                
+                            </svg> 
+                            <input type="file" onchange="uploadAndReadFile(this.files)">
+                            
+                         </button> 
+                        <button type="button" id="run" title="run">
+                            <svg width="35" height="44" viewBox="0 0 35 44" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                                <path d="M6.65365 0.689226C5.30469 -0.199446 3.60938 -0.228743 2.23307 0.601335C0.856771 1.43141 0 2.99391 0 4.69313V39.0681C0 40.7674 0.856771 42.3298 2.23307 43.1599C3.60938 43.99 5.30469 43.9509 6.65365 43.072L32.9036 25.8845C34.207 25.0349 35 23.5213 35 21.8806C35 20.24 34.207 18.7361 32.9036 17.8767L6.65365 0.689226Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="copy-btn" title="copy">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="44" fill="none" viewBox="0 0 512 512" class="copy"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z" fill="white"/></svg>
+                    </button>
+                    
+                    
+                </div>
+                <textarea name="source" class="five" id="source-cont" cols="30" rows="10"></textarea>
+                <textarea name="result" class="six" id="result-cont" cols="30" rows="10"></textarea>
+                <!-- <textarea  class="five" id="source-cont" value=""></textarea>
+                <textarea  class="six"  id="result-cont"  value="">FF</textarea> -->
+            </div>
+            
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
